@@ -9,4 +9,4 @@ fi
 
 echo "Installing Nginx"
 
-dnf install Nginx -y
+dnf install nginx -y
