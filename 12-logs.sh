@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-LOG_FOLDER="/var/log/shell-script"
+LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
@@ -9,7 +9,7 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $LOG_FOLDER
+mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
    if [ $1 -ne 0 ];  then
