@@ -21,11 +21,11 @@ VALIDATE(){
 
 }
 
-dnf install nginx -y &>> &LOGS_FILE
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "installing nginx"
 
-dnf install mysql -y &>> &LOGS_FILE
+dnf install mysql -y &>> $LOGS_FILE
 VALIDATE $? "installing mysql"
 
-dnf install nodejs -y &>> &LOGS_FILE
+dnf install nodejs -y &>> $LOGS_FILE
 VALIDATE $? "installing nodejs"
