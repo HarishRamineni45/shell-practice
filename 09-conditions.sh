@@ -4,5 +4,5 @@
 NUMBER=$1
 
 if [ $NUMBER -gt 20 ]; then 
-     echo "Given Number : $NUMBER  is greater than 20"
+     echo "Given Number : $NUMBER  is greater than 25"
 fi
