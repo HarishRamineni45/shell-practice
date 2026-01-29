@@ -12,7 +12,7 @@ echo "Present working directory : $PWD"
 
 echo "Who is running : $USER"
 
-echo "Home directory of the script : $HOME
+echo "Home directory of the script : $HOME"
 
 echo "PID of the script : $$"
 
