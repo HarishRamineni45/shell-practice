@@ -4,7 +4,7 @@ START_TIME=$(date  +%s)
 
 echo "the timestamp is:: $START_TIME"
 
-sleep
+sleep 10
 
 END_Time=$(date +%s)
 
