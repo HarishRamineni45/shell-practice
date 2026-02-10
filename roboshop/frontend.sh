@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 USERID=$(id -u)
@@ -26,7 +25,6 @@ VALIDATE(){
         echo -e "$2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
     fi
 }
-
 
 dnf module disable nginx -y &>>$LOGS_FILE
 dnf module enable nginx:1.24 -y &>>$LOGS_FILE
