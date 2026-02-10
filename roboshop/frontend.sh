@@ -27,6 +27,7 @@ VALIDATE(){
     fi
 }
 
+
 dnf module disable nginx -y &>>$LOGS_FILE
 dnf module enable nginx:1.24 -y &>>$LOGS_FILE
 dnf install nginx -y &>>$LOGS_FILE
