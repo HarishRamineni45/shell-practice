@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 USERID=$(id -u)
@@ -7,6 +8,8 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+SCRIPT_DIR=$PWD
+MONGODB_HOST=mongodb.daws88s.online
 
 if [ $USERID -ne 0 ]; then
     echo -e "$R Please run this script with root user access $N" | tee -a $LOGS_FILE
@@ -24,14 +27,14 @@ VALIDATE(){
     fi
 }
 
-dnf module disable nodejs -y &>>LOGS_FILE
-VALIDATE $? "Disabling Nodejs Default Version"
+dnf module disable nodejs -y &>>$LOGS_FILE
+VALIDATE $? "Disabling NodeJS Default version"
 
-dnf module enable nodejs:20 -y  &>>LOGS_FILE
-VALIDATE $? "Enabling Nodesjs 20 "
+dnf module enable nodejs:20 -y &>>$LOGS_FILE
+VALIDATE $? "Enabling NodeJS 20"
 
-dnf install nodejs -y  &>>LOGS_FILE
-VALIDATE $? "Install Nodejs"
+dnf install nodejs -y &>>$LOGS_FILE
+VALIDATE $? "Install NodeJS"
 
 id roboshop &>>$LOGS_FILE
 if [ $? -ne 0 ]; then
@@ -66,5 +69,3 @@ systemctl daemon-reload
 systemctl enable user  &>>$LOGS_FILE
 systemctl start user
 VALIDATE $? "Starting and enabling user"
-
-
