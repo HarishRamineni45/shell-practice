@@ -1,10 +1,10 @@
 
 #!/bin/bash
 
-SG_ID="sg-076ec9ad23dab2b28" # replace with your ID
+SG_ID="sg-07b12cea7f0dba32e" # replace with your ID
 AMI_ID="ami-0220d79f3f480ecf5"
-ZONE_ID="Z05013202FKF0ZL12WAOP"
-DOMAIN_NAME="daws88s.online"
+ZONE_ID="Z058318121PT69CGUUXCD"
+DOMAIN_NAME="daws88.site"
 
 for instance in $@
 do
