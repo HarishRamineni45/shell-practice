@@ -1,4 +1,3 @@
-
 #!/bin/bash
 TO_ADDRESS=$1
 SUBJECT=$2
