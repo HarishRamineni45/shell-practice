@@ -9,4 +9,4 @@ echo "please enter your password::"
 
 read -s PASSWORD
 
-echo "Password is $PASSWORD"
+#echo "Password is $PASSWORD"
